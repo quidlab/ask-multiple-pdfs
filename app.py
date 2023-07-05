@@ -54,8 +54,8 @@ def get_conversation_chain(vectorstore):
 def handle_userinput(user_question):
     response = st.session_state.conversation({'question': user_question})
     st.session_state.chat_history = response['chat_history']
-    reversed_messages = st.session_state.messages
-    reversed_messages.reverse()
+    # reversed_messages = st.session_state.messages
+    # reversed_messages.reverse()
 
     for i, message in enumerate(st.session_state.chat_history):
     # for i, message in enumerate(reversed_messages):
