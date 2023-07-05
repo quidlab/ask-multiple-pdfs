@@ -57,8 +57,9 @@ def handle_userinput(user_question):
     reversed_messages = st.session_state.messages
     reversed_messages.reverse()
 
-
-    for i, reversed_messages in enumerate(st.session_state.chat_history):
+    # for i, message in enumerate(st.session_state.chat_history):
+    for i, message in enumerate(reversed_messages):
+    
         if i % 2 == 0:
             st.write(user_template.replace(
                 "{{MSG}}", message.content), unsafe_allow_html=True)
